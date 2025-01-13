@@ -28,7 +28,7 @@ input.onGesture(Gesture.Shake, function () {
     radio.sendNumber(0)
 })
 
-//reseving
+//receiving
 radio.onReceivedNumber(function (receivedNumber: number) {
     receivdCommand = receivedNumber
 })
