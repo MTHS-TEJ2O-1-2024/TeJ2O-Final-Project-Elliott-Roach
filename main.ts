@@ -6,7 +6,7 @@
 */
 
 //setup
-let resevedCommand: number = 0
+let receivdCommand: number = 0
 radio.setGroup(88)
 
 //sending forward
@@ -30,23 +30,23 @@ input.onGesture(Gesture.Shake, function () {
 
 //reseving
 radio.onReceivedNumber(function (receivedNumber: number) {
-    resevedCommand = receivedNumber
+    receivdCommand = receivedNumber
 })
 
 //going forward
 basic.forever(function () {
-    if (resevedCommand == 1) {
+    if (receivdCommand == 1) {
         robotbit.StpCarMove(1, 51)
     }
 
     //going right
-    if (resevedCommand == 5) {
+    if (receivdCommand == 5) {
         robotbit.StpCarTurn(5, 51, 125)
     }
 
 
     //going left
-    if (resevedCommand == 3) {
+    if (receivdCommand == 3) {
         robotbit.StpCarTurn(-5, 51, 125)
     }
 })
