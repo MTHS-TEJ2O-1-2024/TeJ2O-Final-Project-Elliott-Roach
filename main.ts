@@ -7,6 +7,7 @@
 //setup
 let receivdCommand: number = 0
 radio.setGroup(88)
+basic.showIcon(IconNames.Duck)
 
 //sending forward
 input.onButtonPressed(Button.AB, function () {
@@ -32,6 +33,7 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
     radio.sendNumber(0)
+    basic.showIcon(IconNames.Duck)
 })
 
 //receiving
